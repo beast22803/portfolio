@@ -1,0 +1,29 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+.navbar {
+     font-family: 'Roboto mono';
+     background: none !important;
+}
+
+.navBrand {
+     font-weight: 700;
+     font-size: 1.4rem;
+     color: #4BD0E5;
+}
+
+.navBrand:hover {
+     color: #4BD0E5;
+}
+
+.navLink {
+     font-size: 1rem;
+     font-weight: 500;
+     color: #F9F9F9;
+}
+
+.navbar-toggler {
+     border: none;
+}
+
+.navbar-toggler:focus {
+     box-shadow: none !important;
+}
