@@ -11,7 +11,7 @@ function Navbared(props) {
         <>
             <Navbar fixed="top" expand="lg">
                 <Container className="navv justify-content-between align-items-center m-0">
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
                     <Navbar.Brand href="" className="navBrand m-0 ms-3">
                         <Typewriter words={['<VARSHIT MADISETTI/>']} />
                     </Navbar.Brand>
