@@ -24,6 +24,16 @@
      border: none;
 }
 
+.navbar-toggler-icon {
+     color: white;
+}
+
 .navbar-toggler:focus {
      box-shadow: none !important;
+}
+
+@media (max-width: 900px) {
+     .navBrand {
+          font-size: 2.6vh;
+     }
 }
