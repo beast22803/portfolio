@@ -9,7 +9,7 @@ function Home() {
                 <div className="childDiv text-center mb-5">
                     <div><h1 className="nameHead">VARSHIT MADISETTI</h1></div>
                     <div>
-                        <h3 className="roleHead mt-2">SOFTWARE ENGINEER, FULL STACK & APP DEVELOPER.</h3>
+                        <h3 className="roleHead mt-3">SOFTWARE ENGINEER, FULL STACK & APP DEVELOPER.</h3>
                     </div>
                 </div>
             </div>

@@ -8,6 +8,8 @@
      font-weight: 700;
      font-size: 1.4rem;
      color: #4BD0E5;
+     left: 0;
+     padding-left: 1rem;
 }
 
 .navBrand:hover {
@@ -15,10 +17,24 @@
 }
 
 .navLink {
-     font-size: 1rem;
-     font-weight: 500;
+     font-size: 1.02rem;
+     font-weight: 400;
+     height: 6rem;
+     display: flex;
+     align-items: center;
      color: #F9F9F9;
+     transition: opacity 0.4s ease;
 }
+
+.navLinks:hover .navLink {
+     opacity: 0.45;
+}
+
+.navLinks .navLink:hover {
+     color: #F9F9F9 !important;
+     opacity: 1;
+}
+
 
 .navbar-toggler {
      border: none;
@@ -35,5 +51,6 @@
 @media (max-width: 900px) {
      .navBrand {
           font-size: 2.6vh;
+          margin-top: 4rem !important;
      }
 }
