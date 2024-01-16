@@ -1,0 +1,28 @@
+.cursor-dot {
+     width: 6px;
+     height: 6px;
+     background-color: rgb(102, 217, 237);
+}
+
+.cursor-outline {
+     width: 30px;
+     height: 30px;
+     border: 1px solid rgb(102, 217, 237, .6);
+}
+
+.cursor-dot,
+.cursor-outline {
+     position: fixed;
+     top: 0;
+     left: 0;
+     transform: translate(-50%, -50%);
+     border-radius: 50%;
+     z-index: 1;
+     pointer-events: none;
+}
+
+.cursor-dot-enlarged {
+     width: 19px;
+     height: 19px;
+     background-color: rgb(102, 217, 237, .6);
+}

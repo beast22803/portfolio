@@ -30,10 +30,78 @@
      background-position: center center;
 }
 
-@media (max-width: 900px) {
-     .HomeDiv {
-          height: 100vh;
+.hero-mouse {
+     position: absolute;
+     bottom: 5.6rem;
+     left: 50%;
+     margin-left: -15px;
+     text-align: center;
+     z-index: 100;
+     font-size: 12px;
+     text-transform: uppercase;
+     color: white;
+     font-weight: 600;
+     letter-spacing: 1px;
+}
+
+.hero-mouse h3 {
+     margin-left: -14px;
+     padding-top: 15px;
+}
+
+.mouse-icon {
+     width: 2rem;
+     height: 3.5rem;
+     border-radius: 5rem;
+     position: relative;
+     border: 1.5px solid #dedede;
+     text-align: center;
+}
+
+.mouse-icon span {
+     width: 4px;
+     height: 8px;
+     margin: 2px auto 0;
+     display: block;
+     background: #dedede;
+     border-radius: 10px;
+     -webkit-animation: 1.5s ease infinite wheel-up-down;
+     animation: 1.4s ease infinite wheel-up-down;
+}
+
+@-webkit-keyframes wheel-up-down {
+     0% {
+          margin-top: -10px;
+          opacity: 0;
      }
+
+     30% {
+          opacity: 1;
+     }
+
+     100% {
+          margin-top: 20px;
+          opacity: 0;
+     }
+}
+
+@keyframes wheel-up-down {
+     0% {
+          margin-top: 7px;
+          opacity: 0;
+     }
+
+     30% {
+          opacity: 1;
+     }
+
+     100% {
+          margin-top: 40px;
+          opacity: 0;
+     }
+}
+
+@media (max-width: 900px) {
 
      .nameHead {
           font-size: 3rem;

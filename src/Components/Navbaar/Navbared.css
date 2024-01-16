@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 .navbar {
-     font-family: 'Roboto mono';
+     font-family: 'Roboto mono' !important;
      background: none !important;
 }
 
@@ -17,11 +17,10 @@
 }
 
 .navLink {
+     /* padding: 0rem .8rem !important; */
+     margin: 1.75rem .6rem;
      font-size: 1.02rem;
      font-weight: 400;
-     height: 6rem;
-     display: flex;
-     align-items: center;
      color: #F9F9F9;
      transition: opacity 0.4s ease;
 }
