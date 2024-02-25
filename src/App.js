@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-      <CustomCursor />
+      {screenWidth > 900 && <CustomCursor />}
       <div className='mainDiv'>
         <div className='position-relative'>
           <Navbared Width={screenWidth} />
