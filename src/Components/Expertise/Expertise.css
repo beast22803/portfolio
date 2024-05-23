@@ -1,5 +1,5 @@
 .expertDiv {
-     padding: 6rem 1.8rem;
+     padding: 6rem 0rem;
      background-color: #1a191d;
 }
 
@@ -12,8 +12,139 @@
 }
 
 .expertSkill {
-     border: 4px solid #a3a3a3;
-     font-size: 1.5rem;
+     flex: 1;
+     font-family: 'Poppins', sans-serif;
+     border: 2.9px solid #a3a3a3;
      color: #FFFFFF;
      right: 4px;
+     width: 24rem;
+     padding: 2.8rem 2.2rem;
+}
+
+.eachCol {
+     padding: 0;
+     margin: 0;
+     display: flex;
+     flex-direction: column;
+}
+
+.eachExpertHead {
+     font-weight: 500;
+     font-size: 1.6rem;
+     margin: 0;
+     padding: 0;
+}
+
+.expertIcons {
+     font-size: 3.3rem;
+}
+
+.firstExpertHead,
+.secondExpertHead,
+.thirdExpertHead {
+     position: relative;
+     z-index: 0;
+}
+
+.firstExpertHead::after,
+.secondExpertHead::after,
+.thirdExpertHead::after {
+     content: "";
+     position: absolute;
+     bottom: 8%;
+     z-index: -1;
+     height: 0.3em;
+     left: -1%;
+}
+
+.firstExpertHead::after {
+     background: linear-gradient(65deg, #ED2B2A 0%, #ED2B2A 100%, rgba(255, 209, 0, 0) 100%);
+     width: 69%;
+}
+
+.secondExpertHead::after {
+     background: linear-gradient(65deg, #048b3a 0%, #048b3a 100%, rgba(255, 209, 0, 0) 100%);
+     width: 104%;
+}
+
+.thirdExpertHead::after {
+     background: linear-gradient(65deg, #2C49D8 0%, #2C49D8 100%, rgba(255, 209, 0, 0) 100%);
+     width: 90%;
+}
+
+.elementor-widget-image {
+     width: 100%;
+     text-align: center;
+     position: relative;
+     margin: -20px 0 0;
+}
+
+.elementor-widget-container img {
+     width: 600px;
+     opacity: .2 !important;
+     vertical-align: middle;
+     display: inline-block;
+     height: auto;
+     max-width: 100%;
+     border: none;
+     -webkit-border-radius: 0;
+     border-radius: 0;
+     -webkit-box-shadow: none;
+     box-shadow: none;
+}
+
+.tag::before, .tag::after {
+     content: "<h3>";
+     color: white;
+     opacity: .3;
+     font-size: .9rem;
+     font-weight: 200;
+     font-family: "Roboto Mono", monospace;
+}
+
+.tag::after {
+     content: "</h3>";
+}
+
+.tagIn {
+     display: flex;
+     flex-direction: column;
+     font-family: "Roboto Mono", monospace;
+     margin: 0.6rem 0rem;
+     padding: 0rem 0rem 0rem 1.1rem;
+     position: relative;
+}
+
+.tagIn::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     width: 1px;
+     background-color: white;
+     opacity: .3;
+     font-weight: 300;
+}
+
+.tagIn span {
+     margin: 0rem 0rem 0rem 1.2rem;
+}
+
+@media (max-width: 990px) {
+     .expertDiv {
+          padding: 6rem 8vw;
+     }
+
+     .expertHead {
+          font-size: 3rem;
+     }
+
+     .eachCol {
+          margin: .4rem 0rem;
+     }
+
+     .expertSkill {
+          width: 90vw;
+          padding: 1.5rem 2rem;
+     }
 }

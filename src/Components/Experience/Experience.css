@@ -1,0 +1,214 @@
+/* General styles remain the same */
+
+/* Experience Section */
+.experiDiv {
+    padding: 6rem 0rem 13rem 0rem;
+    background-color: #1a191d;
+    color: #FFFFFF;
+}
+
+/* Header */
+.experiHead {
+    font-size: 4.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+}
+
+/* Container */
+.experiCont {
+    width: 47rem;
+}
+
+/* Accordion */
+.accordion {
+    --bs-accordion-color: var(--bs-body-color);
+    --bs-accordion-bg: var(--bs-body-bg);
+    --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+    --bs-accordion-border-color: var(--bs-border-color);
+    --bs-accordion-border-radius: var(--bs-border-radius);
+    --bs-accordion-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+    --bs-accordion-btn-padding-x: 1.25rem;
+    --bs-accordion-btn-padding-y: 1rem;
+    --bs-accordion-btn-color: #fff !important;
+    --bs-accordion-btn-bg: var(--bs-accordion-bg);
+    --bs-accordion-btn-icon: url(data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23ffffff%27 stroke=%27%23ffffff%27 stroke-width=%272%27%3e%3cpath d=%27M8 1c.28 0 .5.22.5.5v6.5h6.5c.28 0 .5.22.5.5s-.22.5-.5.5H8.5v6.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V8.5H1.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5H7.5V1.5c0-.28.22-.5.5-.5z%27/%3e%3c/svg%3e);
+    --bs-accordion-btn-active-icon: url(data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23ffffff%27 stroke=%27%23ffffff%27 stroke-width=%272%27%3e%3cpath d=%27M1 8h14v1H1z%27/%3e%3c/svg%3e);
+    --bs-accordion-btn-icon-width: .8rem;
+    --bs-accordion-btn-icon-transform: rotate(-180deg);
+    --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+    --bs-accordion-btn-focus-border-color: none !important;
+    --bs-accordion-btn-focus-box-shadow: none !important;
+    --bs-accordion-body-padding-x: 1.55rem;
+    --bs-accordion-body-padding-y: 1.6rem;
+}
+
+/* Each Accordion Item */
+.eachAccdItem {
+    font-family: 'Poppins', sans-serif;
+    border: none !important;
+    background-color: #1a191d;
+    color: #FFFFFF;
+}
+
+/* Space between Items */
+.spaceDiv {
+    margin: .7rem 0rem;
+}
+
+/* Accordion Button */
+.accordion-button,
+.accordion-item:first-of-type {
+    border-radius: .3rem !important;
+}
+
+.button:focus:not(:focus-visible) {
+    outline: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+    background-color: #750bda !important;
+}
+
+.accordion-button {
+    color: #FFFFFF;
+    font-size: 1.05rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    background-color: #420f79 !important;
+}
+
+.accordion-button::after {
+    font-weight: 600;
+    opacity: .7;
+}
+
+.eachAccdBody {
+    border-radius: .3rem;
+    background-color: #251c41 !important;
+}
+
+/* Company Detail */
+.companyDetail {
+    font-family: "Roboto Mono", Sans-serif;
+    font-weight: 300;
+    font-size: .96rem;
+    opacity: .75;
+    color: #FFFFFF;
+    left: -3px;
+}
+
+/* Icons */
+.icons {
+    color: #bb76fe !important;
+}
+
+/* Company Description */
+.companyP {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6rem;
+    padding: 0rem 2rem 0rem 0rem !important;
+}
+
+/* Tech Stack */
+.techStack {
+    font-family: "Roboto Mono", Sans-serif;
+    color: #FFFFFF;
+    opacity: .7;
+    font-weight: 300;
+    font-size: .9rem;
+}
+
+/* Anchor Link */
+.anchorLink {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 990px) {
+    .experiDiv {
+        padding: 6rem 5rem;
+    }
+
+    .experiCont {
+        width: 90vw;
+    }
+
+    .companyDetail {
+        left: 0;
+    }
+}
+
+/* Additional Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .experiHead {
+        font-size: 3rem;
+    }
+
+    .experiCont {
+        width: 95vw;
+    }
+
+    .accordion-button {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .eachAccdBody {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .companyDetail {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .companyP {
+        font-size: 0.9rem;
+        padding: 0;
+    }
+
+    .techStack {
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .companyDetail {
+        left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .experiHead {
+        font-size: 2.5rem;
+    }
+
+    .accordion-button {
+        padding: 1.15rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .eachAccdBody {
+        padding: 1rem;
+    }
+
+    .techStack {
+        margin-bottom: 1.5rem;
+    }
+
+    .techStack p {
+        margin: 0.2rem 0rem;
+    }
+
+    .companyDetail {
+        left: 0;
+    }
+}

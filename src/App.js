@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import Home from './Components/Home/Home';
 import Expertise from './Components/Expertise/Expertise';
 import CustomCursor from './Components/CustomCursor/CustomCursor';
+import Experience from './Components/Experience/Experience';
 
 function App() {
 
@@ -28,7 +29,8 @@ function App() {
           <Navbared Width={screenWidth} />
           <Home />
         </div>
-        {/* <Expertise /> */}
+        <Expertise Width={screenWidth} />
+        <Experience Width={screenWidth} />
       </div>
     </>
   );

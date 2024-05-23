@@ -17,10 +17,10 @@ function Navbared(props) {
                     <div>
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="navLinks">
-                                <Nav.Link className={`navLink`} href="">// home</Nav.Link>
-                                <Nav.Link className={`navLink`} href="">// expertise</Nav.Link>
+                                <Nav.Link className={`navLink`} href="#home">// home</Nav.Link>
+                                <Nav.Link className={`navLink`} href="#expertise">// expertise</Nav.Link>
                                 <Nav.Link className={`navLink`} href="">// work</Nav.Link>
-                                <Nav.Link className={`navLink`} href="">// experience</Nav.Link>
+                                <Nav.Link className={`navLink`} href="#experience">// experience</Nav.Link>
                                 <Nav.Link className={`navLink`} href="">// contact</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
