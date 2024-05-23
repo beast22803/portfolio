@@ -21,7 +21,7 @@ function Navbared(props) {
                                 <Nav.Link className={`navLink`} href="#expertise">// expertise</Nav.Link>
                                 <Nav.Link className={`navLink`} href="">// work</Nav.Link>
                                 <Nav.Link className={`navLink`} href="#experience">// experience</Nav.Link>
-                                <Nav.Link className={`navLink`} href="">// contact</Nav.Link>
+                                <Nav.Link className={`navLink`} href="#contact">// contact</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </div>

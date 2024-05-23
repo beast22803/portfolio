@@ -1,0 +1,35 @@
+.Col1 {
+    padding: 1.5rem 10rem;
+    color: #FFFFFF;
+}
+
+.contactMsgHead {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.socialDiv, .emailHead {
+    font-family: "Roboto Mono", Sans-serif;
+}
+
+.socialP {
+    font-weight: 400;
+}
+
+/* Media Queries */
+@media (max-width: 990px) {
+    .Col1 {
+        padding: 1.5rem 3rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .Col1 {
+        padding: 1.5rem 1rem;
+    }
+    
+    .contactRow {
+        flex-direction: column-reverse;
+    }
+}
