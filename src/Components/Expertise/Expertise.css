@@ -1,5 +1,5 @@
 .expertDiv {
-     padding: 6rem 0rem;
+     padding: 4rem 0rem;
      background-color: #1a191d;
 }
 
@@ -9,6 +9,7 @@
      font-family: 'Poppins', sans-serif;
      font-weight: 600;
      line-height: 1.4em;
+     text-shadow: 1px 3px 11px rgba(0, 0, 0, .3);
 }
 
 .expertSkill {

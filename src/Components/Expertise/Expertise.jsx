@@ -4,6 +4,7 @@ import "./Expertise.css";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
+import backImg from "../../images/html-code.webp"
 
 function Expertise(props) {
     return (
@@ -93,7 +94,7 @@ function Expertise(props) {
                             decoding="async"
                             width="640"
                             height="320"
-                            src="https://tamalsen.dev/wp-content/uploads/2021/12/hello-world-html-code-768x384.png"
+                            src={backImg}
                             alt=""
                             sizes="(max-width: 640px) 100vw, 640px"
                         />

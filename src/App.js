@@ -8,6 +8,7 @@ import Expertise from './Components/Expertise/Expertise';
 import CustomCursor from './Components/CustomCursor/CustomCursor';
 import Experience from './Components/Experience/Experience';
 import Contact from './Components/Contact/Contact';
+import Creations from './Components/Creations/Creations';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
           <Home />
         </div>
         <Expertise Width={screenWidth} />
+        <Creations Width={screenWidth} />
         <Experience Width={screenWidth} />
         <Contact Width={screenWidth} />
       </div>

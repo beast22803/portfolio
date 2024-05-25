@@ -10,14 +10,14 @@ function Experience(props) {
         <section id="experience" className="experiDiv">
             <div className="d-flex flex-column align-items-center justify-content-center">
                 <div className="mb-5">
-                    <h1 className="experiHead m-0 text-center">Professional <div></div>Experience</h1>
+                    <h1 className="experiHead m-0 text-center">Work <div></div>Experience</h1>
                 </div>
                 <div className="mt-1">
                     <Container className="experiCont">
                         <Accordion defaultActiveKey="0" className="experiAccd">
                             <Accordion.Item eventKey="0" className="eachAccdItem">
                                 <Accordion.Header className="eachAccdHead">
-                                    Reearch Intern @ CyberGuard360 &nbsp; MARCH 2023 - Dec 2023
+                                    Research Intern @ CyberGuard360 &nbsp; MARCH 2023 - Dec 2023
                                 </Accordion.Header>
                                 <Accordion.Body className="eachAccdBody d-flex my-3">
                                     <div className="d-flex flex-column">

@@ -2,7 +2,7 @@
 
 /* Experience Section */
 .experiDiv {
-    padding: 6rem 0rem 13rem 0rem;
+    padding: 4rem 0rem 13rem 0rem;
     background-color: #1a191d;
     color: #FFFFFF;
 }
@@ -14,6 +14,7 @@
     font-weight: 600;
     line-height: 1;
     text-align: center;
+    text-shadow: 1px 3px 11px rgba(0, 0, 0, .3);
 }
 
 /* Container */

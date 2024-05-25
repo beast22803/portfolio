@@ -17,7 +17,7 @@ function Contact() {
                             <div className="py-4"></div>
                             <div>
                                 <h4 className="emailHead">varshit.madi@gmail.com</h4>
-                                <h4 className="emailHead">(+91) 95025 41052</h4>
+                                {/* <h4 className="emailHead">(+91) 95025 41052</h4> */}
                             </div>
                             <div className="socialDiv mt-4">
                                 <h5 className="my-2 socialP"><a href="https://www.linkedin.com/in/varshitmadisetti/" target="_blank" style={{textDecoration: "none", color: "#FFFFFF"}}>LinkedIn</a></h5>
@@ -32,10 +32,10 @@ function Contact() {
                         <div className="d-flex justify-content-end">
                             <img src="https://rupakr.netlify.app/assets/images/avatar-3.png" alt="" height={"70px"} width={"70px"} />
                         </div>
-                        <div>
-                            <p className="m-0 mt-3">As Varshit's mentor, I admired his unwavering commitment and creative problem-solving skills, which played a pivotal role in our project's success. His passion and determination are indicative of a promising future in the field</p>
+                        <div className="contactP">
+                            <p className="m-0 mt-3 contactP">As Varshit's mentor, I admired his unwavering commitment and creative problem-solving skills, which played a pivotal role in our project's success. His passion and determination are indicative of a promising future in the field</p>
                         </div>
-                        <div className="mt-4">
+                        <div className="mt-4 contactP">
                             <p className="m-0">- Dr. R. Srilaxhmi </p>
                             <p className="m-0">Professor @ NGIT</p>
                         </div>

@@ -19,7 +19,7 @@ function Navbared(props) {
                             <Nav className="navLinks">
                                 <Nav.Link className={`navLink`} href="#home">// home</Nav.Link>
                                 <Nav.Link className={`navLink`} href="#expertise">// expertise</Nav.Link>
-                                <Nav.Link className={`navLink`} href="">// work</Nav.Link>
+                                <Nav.Link className={`navLink`} href="#creation">// creations</Nav.Link>
                                 <Nav.Link className={`navLink`} href="#experience">// experience</Nav.Link>
                                 <Nav.Link className={`navLink`} href="#contact">// contact</Nav.Link>
                             </Nav>

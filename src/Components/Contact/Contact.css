@@ -17,6 +17,9 @@
     font-weight: 400;
 }
 
+.contactP {
+    font-family: 'Poppins', sans-serif;
+}
 /* Media Queries */
 @media (max-width: 990px) {
     .Col1 {
