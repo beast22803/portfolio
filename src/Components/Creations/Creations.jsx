@@ -8,13 +8,15 @@ import faceeye from '../../images/faceeye.avif';
 import zeroday from '../../images/zeroday.png';
 import blog from '../../images/blog.png';
 import crowd from "../../images/crowd.png";
+import ScrollAnimation from 'react-animate-on-scroll';
+import 'animate.css/animate.min.css';
 
 function Creations() {
     const projects = [
         {
             image: crowd,
             title: "CrowdQuest",
-            category: "Web Developmment",
+            category: "Web Development",
             githubLink: "https://github.com/beast22803/Project-CrowdQuest"
         },
         {
@@ -26,7 +28,7 @@ function Creations() {
         {
             image: todo,
             title: "Todo List",
-            category: "Web Developemnt",
+            category: "Web Development",
             githubLink: "https://github.com/beast22803/Todo-Redux-App"
         },
         {
@@ -44,7 +46,7 @@ function Creations() {
         {
             image: blog,
             title: "Blog Website",
-            category: "Web development",
+            category: "Web Development",
             githubLink: "https://github.com/beast22803/Blog-Website"
         }
     ];
@@ -52,24 +54,41 @@ function Creations() {
     return (
         <section id="creation" className="projDiv">
             <div>
-                <div className="mb-5">
-                    <h1 className="m-0 text-center projHead">My Creations</h1>
-                </div>
+                <ScrollAnimation
+                    animateIn="animate__fadeIn"
+                    animateOnce={true}
+                    delay={10}
+                >
+                    <div className="mb-5">
+                        <h1 className="m-0 text-center projHead animate__animated animate__fadeIn">My Creations</h1>
+                    </div>
+                </ScrollAnimation>
                 <Container className="px-lg-5 px-md-0 px-4">
-                    <Row>
+                    <Row className="justify-content-center">
                         {projects.map((project, index) => (
-                            <Col xs={12} md={6} lg={4} className="mb-4" key={index}>
-                                <CreationCard
-                                    image={project.image}
-                                    title={project.title}
-                                    category={project.category}
-                                    githubLink={project.githubLink}
-                                />
+                            <Col
+                                xs={12}
+                                sm={6}
+                                md={4}
+                                className="mb-4"
+                            >
+                                <ScrollAnimation
+                                    key={index}
+                                    animateIn="animate__fadeInUp"
+                                    animateOnce={true}
+                                    delay={index * 100}
+                                >
+                                    <CreationCard
+                                        image={project.image}
+                                        title={project.title}
+                                        category={project.category}
+                                        githubLink={project.githubLink}
+                                    />
+                                </ScrollAnimation>
                             </Col>
                         ))}
                     </Row>
                 </Container>
-                <div></div>
             </div>
         </section>
     );

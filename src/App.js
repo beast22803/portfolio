@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'animate.css/animate.min.css';
 import Navbared from './Components/Navbaar/Navbared';
 import { useEffect, useState } from 'react';
 import Home from './Components/Home/Home';

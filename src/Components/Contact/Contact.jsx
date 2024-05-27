@@ -3,6 +3,8 @@
 import React from "react";
 import "./Contact.css";
 import { Col } from "react-bootstrap";
+import ScrollAnimation from 'react-animate-on-scroll';
+import 'animate.css/animate.min.css';
 
 function Contact() {
     return (
@@ -12,18 +14,30 @@ function Contact() {
                     <Col md={6} className="mb-4 mb-md-0">
                         <div className="Col1">
                             <div>
-                                <h2 className="contactMsgHead">If you find my <br /> work intriguing, please feel free to reach out to me.</h2>
+                                <ScrollAnimation
+                                    animateIn="animate__fadeIn"
+                                    animateOnce={true}
+                                    delay={10}
+                                >
+                                    <h2 className="contactMsgHead">If you find my <br /> work intriguing, please feel free to reach out to me.</h2>
+                                </ScrollAnimation>
                             </div>
                             <div className="py-4"></div>
-                            <div>
-                                <h4 className="emailHead">varshit.madi@gmail.com</h4>
-                                {/* <h4 className="emailHead">(+91) 95025 41052</h4> */}
-                            </div>
-                            <div className="socialDiv mt-4">
-                                <h5 className="my-2 socialP"><a href="https://www.linkedin.com/in/varshitmadisetti/" target="_blank" style={{textDecoration: "none", color: "#FFFFFF"}}>LinkedIn</a></h5>
-                                <h5 className="my-2 socialP"><a href="https://www.instagram.com/beast22803/" target="_blank" style={{textDecoration: "none", color: "#FFFFFF"}}>Instagram</a></h5>
-                                <h5 className="my-2 socialP"><a href="https://github.com/beast22803" target="_blank" style={{textDecoration: "none", color: "#FFFFFF"}}>Github</a></h5>
-                            </div>
+                            <ScrollAnimation
+                                animateIn="animate__fadeIn"
+                                animateOnce={true}
+                                delay={50}
+                            >
+                                <div>
+                                    <h4 className="emailHead">varshit.madi@gmail.com</h4>
+                                    {/* <h4 className="emailHead">(+91) 95025 41052</h4> */}
+                                </div>
+                                <div className="socialDiv mt-4">
+                                    <h5 className="my-2 socialP"><a href="https://www.linkedin.com/in/varshitmadisetti/" target="_blank" style={{ textDecoration: "none", color: "#FFFFFF" }}>LinkedIn</a></h5>
+                                    <h5 className="my-2 socialP"><a href="https://www.instagram.com/beast22803/" target="_blank" style={{ textDecoration: "none", color: "#FFFFFF" }}>Instagram</a></h5>
+                                    <h5 className="my-2 socialP"><a href="https://github.com/beast22803" target="_blank" style={{ textDecoration: "none", color: "#FFFFFF" }}>Github</a></h5>
+                                </div>
+                            </ScrollAnimation>
                         </div>
                     </Col>
                     <Col md={2}></Col>

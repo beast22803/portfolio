@@ -20,6 +20,8 @@
      right: 4px;
      width: 24rem;
      padding: 2.8rem 2.2rem;
+     display: flex;
+          flex-direction: column;
 }
 
 .eachCol {

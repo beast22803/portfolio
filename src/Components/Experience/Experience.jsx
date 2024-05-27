@@ -4,14 +4,22 @@ import "./Experience.css";
 import { Accordion, Container } from 'react-bootstrap';
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { BsArrowUpRightSquareFill } from "react-icons/bs";
+import ScrollAnimation from 'react-animate-on-scroll';
+import 'animate.css/animate.min.css';
 
 function Experience(props) {
     return (
         <section id="experience" className="experiDiv">
             <div className="d-flex flex-column align-items-center justify-content-center">
-                <div className="mb-5">
-                    <h1 className="experiHead m-0 text-center">Work <div></div>Experience</h1>
-                </div>
+                <ScrollAnimation
+                    animateIn="animate__fadeIn"
+                    animateOnce={true}
+                    delay={10}
+                >
+                    <div className="mb-5">
+                        <h1 className="experiHead m-0 text-center">Work <div></div>Experience</h1>
+                    </div>
+                </ScrollAnimation>
                 <div className="mt-1">
                     <Container className="experiCont">
                         <Accordion defaultActiveKey="0" className="experiAccd">
