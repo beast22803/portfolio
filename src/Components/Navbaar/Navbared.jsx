@@ -5,23 +5,23 @@ import './Navbared.css';
 import { Nav, Navbar } from 'react-bootstrap';
 import { Typewriter } from "react-simple-typewriter";
 
-function Navbared(props) {
-    const width = props.Width;
+function Navbared({Width}) {
     return (
         <>
             <Navbar fixed="top" expand="lg" className="d-inline position-absolute">
                 <div className={`navv d-flex justify-content-center align-items-center m-0 position-relative`}>
-                    <Navbar.Brand href="" className={`navBrand position-absolute m-0 ms-lg-3 ${width < 900 && "mt-3"} `}>
+                    <Navbar.Brand href="" className={`navBrand position-absolute m-0 ms-lg-3 ${Width < 900 && "mt-3"} `}>
                         <Typewriter words={['<beast22803 />']} />
                     </Navbar.Brand>
                     <div>
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="navLinks">
-                                <Nav.Link className={`navLink`} href="#home">// home</Nav.Link>
+                                {/* <Nav.Link className={`navLink`} href="#home">// home</Nav.Link> */}
                                 <Nav.Link className={`navLink`} href="#expertise">// expertise</Nav.Link>
                                 <Nav.Link className={`navLink`} href="#creation">// creations</Nav.Link>
                                 <Nav.Link className={`navLink`} href="#experience">// experience</Nav.Link>
                                 <Nav.Link className={`navLink`} href="#contact">// contact</Nav.Link>
+                                {Width > 990 && <Nav.Link target="_blank" className={`navLink`} href="https://docs.google.com/document/d/1Icp7YjmLRM0IOqM7smSQ3EEX9YX9nqEk7tufTYZ6wak/edit?usp=sharing">// resume</Nav.Link>}
                             </Nav>
                         </Navbar.Collapse>
                     </div>

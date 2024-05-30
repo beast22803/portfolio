@@ -6,7 +6,7 @@ import { Col } from "react-bootstrap";
 import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css/animate.min.css';
 
-function Contact() {
+function Contact({Width}) {
     return (
         <section id="contact" className="contactDiv">
             <div className="d-flex flex-column flex-fill">
@@ -36,6 +36,11 @@ function Contact() {
                                     <h5 className="my-2 socialP"><a href="https://www.linkedin.com/in/varshitmadisetti/" target="_blank" style={{ textDecoration: "none", color: "#FFFFFF" }}>LinkedIn</a></h5>
                                     <h5 className="my-2 socialP"><a href="https://www.instagram.com/beast22803/" target="_blank" style={{ textDecoration: "none", color: "#FFFFFF" }}>Instagram</a></h5>
                                     <h5 className="my-2 socialP"><a href="https://github.com/beast22803" target="_blank" style={{ textDecoration: "none", color: "#FFFFFF" }}>Github</a></h5>
+                                    {Width < 990 &&
+                                        <>
+                                            <h5 className="my-2 socialP"><a href="https://docs.google.com/document/d/1Icp7YjmLRM0IOqM7smSQ3EEX9YX9nqEk7tufTYZ6wak/edit?usp=sharing" target="_blank" style={{ textDecoration: "none", color: "#FFFFFF" }}>Resume</a></h5>
+                                        </>
+                                    }
                                 </div>
                             </ScrollAnimation>
                         </div>
