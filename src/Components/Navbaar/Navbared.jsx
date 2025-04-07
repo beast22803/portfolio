@@ -21,7 +21,7 @@ function Navbared({Width}) {
                                 <Nav.Link className={`navLink`} href="#creation">// creations</Nav.Link>
                                 <Nav.Link className={`navLink`} href="#experience">// experience</Nav.Link>
                                 <Nav.Link className={`navLink`} href="#contact">// contact</Nav.Link>
-                                {Width > 990 && <Nav.Link target="_blank" className={`navLink`} href="https://docs.google.com/document/d/1Icp7YjmLRM0IOqM7smSQ3EEX9YX9nqEk7tufTYZ6wak/edit?usp=sharing">// resume</Nav.Link>}
+                                {Width > 990 && <Nav.Link target="_blank" className={`navLink`} href="https://drive.google.com/file/d/19gnVs0ZOQWuoax_FUbW_xWawY56uFmZi/view?usp=drive_link">// resume</Nav.Link>}
                             </Nav>
                         </Navbar.Collapse>
                     </div>
