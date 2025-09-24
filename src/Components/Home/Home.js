@@ -6,7 +6,12 @@ function Home() {
     return (
         <section id="home">
             <div className="HomeDiv d-flex justify-content-center align-items-center">
-                <div className="backImg"></div>
+                <div
+                    className="backImg"
+                    style={{
+                        backgroundImage: `linear-gradient(180deg, #00000012 60%, #1a191d 100%), url(${process.env.PUBLIC_URL}/beast22803-cover.jpg)`
+                    }}
+                ></div>
                 <div className="childDiv text-center">
                     <div><h1 className="nameHead">VARSHIT MADISETTI</h1></div>
                     <div>
@@ -15,8 +20,8 @@ function Home() {
                 </div>
             </div>
             <div>
-                <a class="hero-mouse anchor" href="#expertise">
-                    <div class="mouse-icon"><span></span></div>
+                <a className="hero-mouse anchor" href="#expertise">
+                    <div className="mouse-icon"><span></span></div>
                 </a>
             </div>
         </section>

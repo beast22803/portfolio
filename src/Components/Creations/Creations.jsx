@@ -2,14 +2,15 @@ import React from "react";
 import "./Creations.css";
 import { Container, Row, Col } from "react-bootstrap";
 import CreationCard from "./CreationCard";
-import coltran from '../../images/coltran.jpg';
-import todo from '../../images/todo.png';
-import faceeye from '../../images/faceeye.avif';
-import zeroday from '../../images/zeroday.png';
-import blog from '../../images/blog.png';
-import crowd from "../../images/crowd.png";
 import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css/animate.min.css';
+
+const coltran = `${process.env.PUBLIC_URL}/images/coltran.jpg`;
+const todo = `${process.env.PUBLIC_URL}/images/todo.png`;
+const faceeye = `${process.env.PUBLIC_URL}/images/faceeye.avif`;
+const zeroday = `${process.env.PUBLIC_URL}/images/zeroday.png`;
+const blog = `${process.env.PUBLIC_URL}/images/blog.png`;
+const crowd = `${process.env.PUBLIC_URL}/images/crowd.png`;
 
 function Creations() {
     const projects = [

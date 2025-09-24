@@ -4,9 +4,10 @@ import "./Expertise.css";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
-import backImg from "../../images/html-code.webp";
 import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css/animate.min.css';
+
+const backImg = `${process.env.PUBLIC_URL}/images/html-code.webp`;
 
 function Expertise(props) {
     return (
@@ -67,14 +68,14 @@ function Expertise(props) {
                                             </div>
                                             <div>
                                                 <h4 className="eachExpertHead secondExpertHead">Frontend Dev</h4>
-                                                <h4 className="eachExpertHead">ReactJs</h4>
+                                                <h4 className="eachExpertHead">NextJs</h4>
                                             </div>
                                         </div>
                                         <div className="mt-2">
                                             <div className="tag">
                                                 <div className="tagIn">
                                                     <span>
-                                                        Dedicated to Ux/UI. Proficient with HTML, CSS, JS, ReactJS and its frameworks.
+                                                        Dedicated to Ux/UI. Proficient with HTML, CSS, JS, NextJS, Angular(16+) and its frameworks.
                                                     </span>
                                                 </div>
                                             </div>
@@ -96,14 +97,14 @@ function Expertise(props) {
                                             </div>
                                             <div>
                                                 <h4 className="eachExpertHead thirdExpertHead">Backend Dev</h4>
-                                                <h4 className="eachExpertHead">NodeJS, MySQL</h4>
+                                                <h4 className="eachExpertHead">NodeJS, MySQL, MongoDB</h4>
                                             </div>
                                         </div>
                                         <div className="mt-2">
                                             <div className="tag">
                                                 <div className="tagIn">
                                                     <span>
-                                                        Skilled in developing backend solutions using Java Spring Boot, Node.js, and databases such as MongoDB and SQL.
+                                                        Skilled in developing backend solutions using Node.js, and databases such as MongoDB and SQL.
                                                     </span>
                                                 </div>
                                             </div>
