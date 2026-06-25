@@ -4,9 +4,9 @@ import { Row, Col } from "react-bootstrap";
 import { experiences } from "./data";
 import { FaMapMarkerAlt, FaExternalLinkAlt } from "react-icons/fa";
 
-function Experience() {
+function Experience({ Width, sectionRef }) {
   return (
-    <section id="experience" className="experi-section py-5 border-bottom border-dark newsprint-bg">
+    <section ref={sectionRef} id="experience" className="experi-section py-5 border-bottom border-dark newsprint-bg">
       <div className="container-xl px-4">
         {/* Section Header */}
         <div className="text-center border-bottom border-dark pb-4 mb-5">

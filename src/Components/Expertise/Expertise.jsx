@@ -6,9 +6,9 @@ import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 
 
-function Expertise({ Width }) {
+function Expertise({ Width, sectionRef }) {
   return (
-    <section id="expertise" className="expert-section py-5 border-bottom border-dark newsprint-bg">
+    <section ref={sectionRef} id="expertise" className="expert-section py-5 border-bottom border-dark newsprint-bg">
       <div className="container-xl px-4">
         {/* Section Header */}
         <div className="text-center border-bottom border-dark pb-4 mb-5">

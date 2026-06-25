@@ -2,9 +2,9 @@ import "./Contact.css";
 import { Row, Col } from "react-bootstrap";
 import { FaLinkedinIn, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 
-function Contact({ Width }) {
+function Contact({ Width, sectionRef }) {
   return (
-    <section id="contact" className="contact-section py-5 newsprint-bg">
+    <section ref={sectionRef} id="contact" className="contact-section py-5 newsprint-bg">
       <div className="container-xl px-4">
         {/* Section Header */}
         <div className="text-center border-bottom border-dark pb-4 mb-5">

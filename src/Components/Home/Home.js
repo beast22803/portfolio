@@ -1,9 +1,9 @@
 import React from "react";
 import './Home.css';
 
-function Home() {
+function Home({ sectionRef, refs, scrollToSection }) {
   return (
-    <section id="home" className="home-section py-5 newsprint-bg newsprint-texture border-bottom border-dark">
+    <section ref={sectionRef} id="home" className="home-section py-5 newsprint-bg newsprint-texture border-bottom border-dark">
       <div className="container-xl px-4 mt-4">
         {/* Newspaper main headline */}
         <div className="row text-center text-md-start border-bottom border-dark pb-4">
@@ -55,10 +55,24 @@ function Home() {
                 He is currently pursuing an M.Sc. in AI & Machine Learning at TU Darmstadt, aiming to specialize in Deep Learning, Reinforcement Learning, Computer Vision, and NLP. Varshit is seeking a Werkstudent (working student) role in software engineering or AI within Germany to continue shipping clean production code.
               </p>
               <div className="mt-4 pt-3 border-top border-dark d-flex flex-wrap gap-3">
-                <a href="#contact" className="btn btn-outline-dark font-sans text-uppercase text-xs tracking-widest py-2 px-3 hard-shadow-hover">
+                <a 
+                  href="#contact" 
+                  className="btn btn-outline-dark font-sans text-uppercase text-xs tracking-widest py-2 px-3 hard-shadow-hover"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(refs.contact);
+                  }}
+                >
                   Get In Touch
                 </a>
-                <a href="#creation" className="btn btn-dark font-sans text-uppercase text-xs tracking-widest py-2 px-3 bg-dark text-white hard-shadow-hover">
+                <a 
+                  href="#creation" 
+                  className="btn btn-dark font-sans text-uppercase text-xs tracking-widest py-2 px-3 bg-dark text-white hard-shadow-hover"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(refs.creations);
+                  }}
+                >
                   View Creations
                 </a>
               </div>

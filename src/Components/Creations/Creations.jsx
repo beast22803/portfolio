@@ -8,7 +8,7 @@ const zeroday = `${process.env.PUBLIC_URL}/images/zeroday.png`;
 const crowd = `${process.env.PUBLIC_URL}/images/crowd.png`;
 const jobanalyser = `${process.env.PUBLIC_URL}/images/jobanalyser.png`;
 
-function Creations() {
+function Creations({ Width, sectionRef }) {
   const primaryProjects = [
     {
       image: jobanalyser,
@@ -62,7 +62,7 @@ function Creations() {
   ];
 
   return (
-    <section id="creation" className="proj-section py-5 border-bottom border-dark newsprint-bg">
+    <section ref={sectionRef} id="creation" className="proj-section py-5 border-bottom border-dark newsprint-bg">
       <div className="container-xl px-4">
         {/* Section Header */}
         <div className="text-center border-bottom border-dark pb-4 mb-5">

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './Navbared.css';
 import { Typewriter } from "react-simple-typewriter";
 
-function Navbared({ Width }) {
+function Navbared({ Width, refs, scrollToSection }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -27,7 +27,14 @@ function Navbared({ Width }) {
 
       {/* Main Masthead / Logo */}
       <div className="header-masthead text-center py-4 border-bottom border-dark position-relative">
-        <a href="#home" className="text-decoration-none text-dark">
+        <a 
+          href="#home" 
+          className="text-decoration-none text-dark"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection(refs.home);
+          }}
+        >
           <h1 className="masthead-title font-serif m-0 tracking-tighter text-uppercase">
             The Daily Stack
           </h1>
@@ -67,16 +74,48 @@ function Navbared({ Width }) {
       {/* Navigation Menu Row */}
       <nav className={`header-nav border-bottom border-dark ${menuOpen ? "show" : ""} d-lg-block`}>
         <div className="nav-container d-flex flex-column flex-lg-row justify-content-center align-items-stretch">
-          <a href="#expertise" className="nav-item font-sans text-uppercase text-xs tracking-widest text-decoration-none text-dark py-3 px-4 border-bottom border-lg-none border-dark" onClick={() => setMenuOpen(false)}>
+          <a 
+            href="#expertise" 
+            className="nav-item font-sans text-uppercase text-xs tracking-widest text-decoration-none text-dark py-3 px-4 border-bottom border-lg-none border-dark" 
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen(false);
+              scrollToSection(refs.expertise);
+            }}
+          >
             Expertise
           </a>
-          <a href="#creation" className="nav-item font-sans text-uppercase text-xs tracking-widest text-decoration-none text-dark py-3 px-4 border-bottom border-lg-none border-dark" onClick={() => setMenuOpen(false)}>
+          <a 
+            href="#creation" 
+            className="nav-item font-sans text-uppercase text-xs tracking-widest text-decoration-none text-dark py-3 px-4 border-bottom border-lg-none border-dark" 
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen(false);
+              scrollToSection(refs.creations);
+            }}
+          >
             Creations
           </a>
-          <a href="#experience" className="nav-item font-sans text-uppercase text-xs tracking-widest text-decoration-none text-dark py-3 px-4 border-bottom border-lg-none border-dark" onClick={() => setMenuOpen(false)}>
+          <a 
+            href="#experience" 
+            className="nav-item font-sans text-uppercase text-xs tracking-widest text-decoration-none text-dark py-3 px-4 border-bottom border-lg-none border-dark" 
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen(false);
+              scrollToSection(refs.experience);
+            }}
+          >
             Experience
           </a>
-          <a href="#contact" className="nav-item font-sans text-uppercase text-xs tracking-widest text-decoration-none text-dark py-3 px-4 border-bottom border-lg-none border-dark" onClick={() => setMenuOpen(false)}>
+          <a 
+            href="#contact" 
+            className="nav-item font-sans text-uppercase text-xs tracking-widest text-decoration-none text-dark py-3 px-4 border-bottom border-lg-none border-dark" 
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen(false);
+              scrollToSection(refs.contact);
+            }}
+          >
             Contact
           </a>
         </div>
