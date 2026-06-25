@@ -1,153 +1,74 @@
-.expertDiv {
-     padding: 4rem 0rem;
-     background-color: #1a191d;
+.expert-section {
+  background-color: var(--bg-paper);
+  color: var(--fg-ink);
 }
 
-.expertHead {
-     color: #FFFFFF;
-     font-size: 4.5rem;
-     font-family: 'Poppins', sans-serif;
-     font-weight: 600;
-     line-height: 1.4em;
-     text-shadow: 1px 3px 11px rgba(0, 0, 0, .3);
+.expert-section-head {
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
-.expertSkill {
-     flex: 1;
-     font-family: 'Poppins', sans-serif;
-     border: 2.9px solid #a3a3a3;
-     color: #FFFFFF;
-     right: 4px;
-     width: 24rem;
-     padding: 2.8rem 2.2rem;
-     display: flex;
-          flex-direction: column;
+.expert-card {
+  background-color: var(--bg-paper);
+  transition: background-color 0.15s ease;
 }
 
-.eachCol {
-     padding: 0;
-     margin: 0;
-     display: flex;
-     flex-direction: column;
+.expert-card:hover {
+  background-color: var(--muted-grey);
 }
 
-.eachExpertHead {
-     font-weight: 500;
-     font-size: 1.6rem;
-     margin: 0;
-     padding: 0;
+.expert-card-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
 }
 
-.expertIcons {
-     font-size: 3.3rem;
+.expert-icon {
+  font-size: 2.2rem;
 }
 
-.firstExpertHead,
-.secondExpertHead,
-.thirdExpertHead {
-     position: relative;
-     z-index: 0;
+.icon-wrapper {
+  border-radius: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
 }
 
-.firstExpertHead::after,
-.secondExpertHead::after,
-.thirdExpertHead::after {
-     content: "";
-     position: absolute;
-     bottom: 8%;
-     z-index: -1;
-     height: 0.3em;
-     left: -1%;
+.badge-mono {
+  border: 1px solid var(--fg-ink);
+  padding: 3px 8px;
+  background-color: var(--bg-paper);
+  color: var(--fg-ink);
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.15s ease;
 }
 
-.firstExpertHead::after {
-     background: linear-gradient(65deg, #ED2B2A 0%, #ED2B2A 100%, rgba(255, 209, 0, 0) 100%);
-     width: 69%;
+.badge-mono:hover {
+  background-color: var(--accent-red);
+  color: var(--bg-paper);
+  border-color: var(--accent-red);
 }
 
-.secondExpertHead::after {
-     background: linear-gradient(65deg, #048b3a 0%, #048b3a 100%, rgba(255, 209, 0, 0) 100%);
-     width: 104%;
+/* Border Collapse Logic */
+@media (min-width: 992px) {
+  .border-dark-right {
+    border-right: 1px solid var(--fg-ink);
+  }
+  .border-lg-none {
+    border-bottom: none !important;
+  }
 }
 
-.thirdExpertHead::after {
-     background: linear-gradient(65deg, #2C49D8 0%, #2C49D8 100%, rgba(255, 209, 0, 0) 100%);
-     width: 90%;
-}
-
-.elementor-widget-image {
-     width: 100%;
-     text-align: center;
-     position: relative;
-     margin: -20px 0 0;
-}
-
-.elementor-widget-container img {
-     width: 600px;
-     opacity: .2 !important;
-     vertical-align: middle;
-     display: inline-block;
-     height: auto;
-     max-width: 100%;
-     border: none;
-     -webkit-border-radius: 0;
-     border-radius: 0;
-     -webkit-box-shadow: none;
-     box-shadow: none;
-}
-
-.tag::before, .tag::after {
-     content: "<h3>";
-     color: white;
-     opacity: .3;
-     font-size: .9rem;
-     font-weight: 200;
-     font-family: "Roboto Mono", monospace;
-}
-
-.tag::after {
-     content: "</h3>";
-}
-
-.tagIn {
-     display: flex;
-     flex-direction: column;
-     font-family: "Roboto Mono", monospace;
-     margin: 0.6rem 0rem;
-     padding: 0rem 0rem 0rem 1.1rem;
-     position: relative;
-}
-
-.tagIn::before {
-     content: '';
-     position: absolute;
-     top: 0;
-     bottom: 0;
-     width: 1px;
-     background-color: white;
-     opacity: .3;
-     font-weight: 300;
-}
-
-.tagIn span {
-     margin: 0rem 0rem 0rem 1.2rem;
-}
-
-@media (max-width: 990px) {
-     .expertDiv {
-          padding: 6rem 8vw;
-     }
-
-     .expertHead {
-          font-size: 3rem;
-     }
-
-     .eachCol {
-          margin: .4rem 0rem;
-     }
-
-     .expertSkill {
-          width: 90vw;
-          padding: 1.5rem 2rem;
-     }
+@media (max-width: 991.98px) {
+  .expert-col {
+    border-bottom: 1px solid var(--fg-ink);
+  }
+  .expert-col:last-child {
+    border-bottom: none;
+  }
 }

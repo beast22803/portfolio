@@ -1,38 +1,34 @@
-.Col1 {
-    padding: 1.5rem 10rem;
-    color: #FFFFFF;
+.contact-section {
+  background-color: var(--bg-paper);
+  color: var(--fg-ink);
 }
 
-.contactMsgHead {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
+.contact-section-head {
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
-.socialDiv, .emailHead {
-    font-family: "Roboto Mono", Sans-serif;
+.testimonial-box {
+  background-color: var(--bg-paper);
 }
 
-.socialP {
-    font-weight: 400;
+.classified-ad {
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
 }
 
-.contactP {
-    font-family: 'Poppins', sans-serif;
-}
-/* Media Queries */
-@media (max-width: 990px) {
-    .Col1 {
-        padding: 1.5rem 3rem;
-    }
+.ad-icon-wrapper {
+  border-right: 1px solid var(--fg-ink);
+  height: 100%;
 }
 
-@media (max-width: 767px) {
-    .Col1 {
-        padding: 1.5rem 1rem;
-    }
-    
-    .contactRow {
-        flex-direction: column-reverse;
-    }
+.border-top-4 {
+  border-top: 4px double var(--fg-ink) !important;
+}
+
+@media (min-width: 992px) {
+  .border-lg-right {
+    border-right: 1px solid var(--fg-ink);
+  }
 }

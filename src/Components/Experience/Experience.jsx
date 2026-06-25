@@ -1,101 +1,157 @@
 import React from "react";
 import "./Experience.css";
-import { Accordion, Container } from "react-bootstrap";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import { Row, Col } from "react-bootstrap";
 import { experiences } from "./data";
-import { BsArrowUpRightSquareFill } from "react-icons/bs";
-import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css/animate.min.css";
+import { FaMapMarkerAlt, FaExternalLinkAlt } from "react-icons/fa";
 
 function Experience() {
-    return (
-        <section id="experience" className="experiDiv">
-            <div className="d-flex flex-column align-items-center justify-content-center">
-                <ScrollAnimation
-                    animateIn="animate__fadeIn"
-                    animateOnce={true}
-                    delay={10}
-                >
-                    <div className="mb-5">
-                        <h1 className="experiHead m-0 text-center">
-                            Work <div></div>Experience
-                        </h1>
-                    </div>
-                </ScrollAnimation>
+  return (
+    <section id="experience" className="experi-section py-5 border-bottom border-dark newsprint-bg">
+      <div className="container-xl px-4">
+        {/* Section Header */}
+        <div className="text-center border-bottom border-dark pb-4 mb-5">
+          <span className="font-mono text-xs tracking-widest text-uppercase text-danger font-weight-bold mb-2 d-block">
+            {"// RECORD OF PROFESSIONAL & ACADEMIC STANDING"}
+          </span>
+          <h2 className="experi-section-head font-serif text-uppercase tracking-tighter m-0">
+            Work Experience & Education
+          </h2>
+        </div>
 
-                <div className="mt-1">
-                    <Container className="experiCont">
-                        <Accordion defaultActiveKey="0" className="experiAccd">
-                            {experiences.map((exp, index) => (
-                                <>
-                                    <Accordion.Item
-                                        eventKey={index.toString()}
-                                        key={index}
-                                        className="eachAccdItem"
-                                    >
-                                        <Accordion.Header className="eachAccdHead">
-                                            {`${exp.role} @ ${exp.company}  ${exp.duration}`}
-                                        </Accordion.Header>
+        <Row className="g-5">
+          {/* Left Column: Work Experience (8-col on desktop) */}
+          <Col lg={8} className="pe-lg-5 border-lg-right border-dark">
+            <h4 className="font-sans text-xs tracking-widest text-uppercase border-bottom border-dark pb-2 mb-4">
+              Chronological Work Record
+            </h4>
+            <div className="work-timeline">
+              {experiences.map((exp, index) => (
+                <div key={index} className={`work-item ${index !== experiences.length - 1 ? "border-bottom border-dark pb-4 mb-4" : ""}`}>
+                  {/* Job Header */}
+                  <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-2">
+                    <h3 className="font-serif text-uppercase tracking-tight m-0" style={{ fontSize: "1.25rem", fontWeight: "800" }}>
+                      {exp.role} <span className="text-danger">@</span> {exp.company}
+                    </h3>
+                    <span className="font-mono text-xs text-muted-600 font-weight-bold mt-1 mt-md-0">
+                      {exp.duration}
+                    </span>
+                  </div>
 
-                                        <Accordion.Body className="eachAccdBody d-flex my-3">
-                                            <div className="d-flex flex-column">
-                                                <div className="d-flex companyDetail position-relative">
-                                                    <div>
-                                                        <span>
-                                                            <FaMapMarkerAlt
-                                                                className="me-1 icons p-lg-0 ps-1"
-                                                                fontSize={"1.2rem"}
-                                                            />
-                                                        </span>
-                                                        <span className="ms-2 me-3">{exp.location}</span>
-                                                    </div>
-                                                    <a href={exp.link} className="anchorLink m-lg-0 mt-1 ps-1" >
-                                                        <span>
-                                                            <BsArrowUpRightSquareFill
-                                                                className="me-1 icons"
-                                                                fontSize={"1rem"}
-                                                            />
-                                                        </span>
-                                                        <span className="ms-2 me-3">
-                                                            {new URL(exp.link).hostname}
-                                                        </span>
-                                                    </a>
-                                                </div>
+                  {/* Metadata Row */}
+                  <div className="d-flex flex-wrap gap-3 font-mono text-xs text-muted-500 mb-3">
+                    <span className="d-flex align-items-center">
+                      <FaMapMarkerAlt className="me-1 text-danger" /> {exp.location}
+                    </span>
+                    <a href={exp.link} target="_blank" rel="noopener noreferrer" className="text-dark text-decoration-none d-flex align-items-center hover-red-text">
+                      <FaExternalLinkAlt className="me-1 text-danger" style={{ fontSize: "0.7rem" }} /> {new URL(exp.link).hostname}
+                    </a>
+                  </div>
 
-                                                <div className="mb-lg-3">
-                                                    <p className="m-0 p-0 companyP">{exp.description}</p>
-                                                </div>
+                  {/* Description */}
+                  <p className="font-body text-justify text-muted-600 mb-3" style={{ fontSize: "0.95rem", lineHeight: "1.6" }}>
+                    {exp.description}
+                  </p>
 
-                                                <div className="d-flex techStack flex-wrap">
-                                                    {exp.techStack.map((tech, i) => (
-                                                        <p key={i} className="my-0 mx-2">
-                                                            {tech}
-                                                        </p>
-                                                    ))}
-                                                </div>
-                                            </div>
-
-                                            <div className="d-flex align-items-center">
-                                                <div>
-                                                    <img
-                                                        src={exp.image}
-                                                        alt={exp.company}
-                                                        height={"110px"}
-                                                        width={"110px"}
-                                                    />
-                                                </div>
-                                            </div>
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-                                    {experiences.length - 1 !== 0  && <div className="spaceDiv"></div>}
-                                </>
-                            ))}
-                        </Accordion>
-                    </Container>
+                  {/* Technologies used */}
+                  <div className="d-flex flex-wrap gap-2">
+                    {exp.techStack.map((tech, i) => (
+                      <span key={i} className="font-mono text-xs bg-light border border-dark px-2 py-0.5">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
+              ))}
             </div>
-        </section>
-    );
+          </Col>
+
+          {/* Right Column: Education & Supplements (4-col on desktop) */}
+          <Col lg={4} className="ps-lg-4">
+            {/* Education Section */}
+            <div className="mb-5">
+              <h4 className="font-sans text-xs tracking-widest text-uppercase border-bottom border-dark pb-2 mb-4">
+                Academic Qualifications
+              </h4>
+              <div className="education-list font-sans">
+                {/* Degree 1 */}
+                <div className="education-item mb-4 pb-4 border-bottom border-dashed border-dark">
+                  <span className="font-mono text-xs text-danger tracking-wider uppercase d-block mb-1">04/2026 — Present</span>
+                  <h5 className="font-serif text-uppercase tracking-tight m-0" style={{ fontSize: "1.1rem", fontWeight: "700" }}>
+                    M.Sc. AI & Machine Learning
+                  </h5>
+                  <p className="font-sans text-xs text-muted-600 mb-2">TU Darmstadt, Germany</p>
+                  <p className="font-body text-justify text-xs text-muted-600 mb-0">
+                    <strong>Focus:</strong> Deep Learning, Reinforcement Learning, Computer Vision, and NLP.
+                  </p>
+                </div>
+
+                {/* Degree 2 */}
+                <div className="education-item">
+                  <span className="font-mono text-xs text-danger tracking-wider uppercase d-block mb-1">2021 — 2025</span>
+                  <h5 className="font-serif text-uppercase tracking-tight m-0" style={{ fontSize: "1.1rem", fontWeight: "700" }}>
+                    B.Tech Computer Science
+                  </h5>
+                  <p className="font-sans text-xs text-muted-600 mb-2">Osmania University, India</p>
+                  <p className="font-body text-justify text-xs text-muted-600 mb-0">
+                    <strong>GPA:</strong> 8.6 / 10.0 <br />
+                    <strong>Thesis:</strong> Transformer-Based Text Translation using custom attention models.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Languages Section */}
+            <div className="mb-5">
+              <h4 className="font-sans text-xs tracking-widest text-uppercase border-bottom border-dark pb-2 mb-4">
+                Language Capacities
+              </h4>
+              <table className="table table-sm table-borderless font-mono text-xs mb-0">
+                <tbody>
+                  <tr>
+                    <td className="ps-0 font-weight-bold text-uppercase" style={{ width: "40%" }}>English</td>
+                    <td className="text-muted-600">— C1 (Full Professional)</td>
+                  </tr>
+                  <tr>
+                    <td className="ps-0 font-weight-bold text-uppercase">German</td>
+                    <td className="text-muted-600">— A2 (Limited Working)</td>
+                  </tr>
+                  <tr>
+                    <td className="ps-0 font-weight-bold text-uppercase">Telugu</td>
+                    <td className="text-muted-600">— Native</td>
+                  </tr>
+                  <tr>
+                    <td className="ps-0 font-weight-bold text-uppercase">Hindi</td>
+                    <td className="text-muted-600">— Professional Working</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Certifications Section */}
+            <div>
+              <h4 className="font-sans text-xs tracking-widest text-uppercase border-bottom border-dark pb-2 mb-4">
+                Certifications
+              </h4>
+              <ul className="list-unstyled pl-0 font-body text-xs text-muted-600">
+                <li className="mb-2 d-flex align-items-start">
+                  <span className="text-danger me-2">✦</span>
+                  <span>Web Development Specialist Certification</span>
+                </li>
+                <li className="mb-2 d-flex align-items-start">
+                  <span className="text-danger me-2">✦</span>
+                  <span>Advanced Programming in Java — NPTEL</span>
+                </li>
+                <li className="d-flex align-items-start">
+                  <span className="text-danger me-2">✦</span>
+                  <span>Python: The Joy of Computing — IIT Madras</span>
+                </li>
+              </ul>
+            </div>
+          </Col>
+        </Row>
+      </div>
+    </section>
+  );
 }
 
 export default Experience;

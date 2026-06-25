@@ -1,28 +1,30 @@
 .cursor-dot {
-     width: 6px;
-     height: 6px;
-     background-color: rgb(102, 217, 237);
+  width: 6px;
+  height: 6px;
+  background-color: var(--fg-ink);
 }
 
 .cursor-outline {
-     width: 30px;
-     height: 30px;
-     border: 1px solid rgb(102, 217, 237, .6);
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid var(--fg-ink);
 }
 
 .cursor-dot,
 .cursor-outline {
-     position: fixed;
-     top: 0;
-     left: 0;
-     transform: translate(-50%, -50%);
-     border-radius: 50%;
-     z-index: 10;
-     pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 0px !important; /* Stark geometry */
+  z-index: 9999;
+  pointer-events: none;
+  mix-blend-mode: difference; /* Inverts color over text for legibility */
 }
 
+/* When hovering over links/buttons, enlarge outline or change color */
 .cursor-dot-enlarged {
-     width: 19px;
-     height: 19px;
-     background-color: rgb(102, 217, 237, .6);
+  width: 14px;
+  height: 14px;
+  background-color: var(--accent-red);
 }
