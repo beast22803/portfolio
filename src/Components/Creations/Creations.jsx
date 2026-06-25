@@ -15,7 +15,7 @@ function Creations() {
       title: "JobAnalyser — AI Job Assistant",
       category: "Web & AI",
       description: "Full-stack AI application (Next.js + FastAPI + SQLAlchemy) with a LangGraph self-improvement loop that generates, critiques, and refines cover letters against job descriptions. Supports OpenRouter and Ollama, with ATS scoring and application tracking.",
-      githubLink: "https://github.com/beast22803/JobAnalyser" // Let's check what the link is or fallback to github.com/beast22803
+      githubLink: "https://github.com/beast22803/ai-job-application-assistant"
     },
     {
       image: coltran,
