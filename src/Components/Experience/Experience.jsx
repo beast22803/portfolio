@@ -93,7 +93,7 @@ function Experience({ Width, sectionRef }) {
                   </h5>
                   <p className="font-sans text-xs text-muted-600 mb-2">Osmania University, India</p>
                   <p className="font-body text-justify text-xs text-muted-600 mb-0">
-                    <strong>GPA:</strong> 8.6 / 10.0 <br />
+                    <strong>GPA:</strong> 8.26 / 10.0 <br />
                     <strong>Thesis:</strong> Transformer-Based Text Translation using custom attention models.
                   </p>
                 </div>
