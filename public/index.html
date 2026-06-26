@@ -4,6 +4,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+          document.documentElement.setAttribute("data-theme", savedTheme);
+        } else {
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+        }
+      } catch (e) {}
+    })();
+  </script>
   <title>Varshit Madisetti — Full-Stack Developer & AI/ML Engineer</title>
   <meta name="description" content="Professional portfolio of Varshit Madisetti, a Full-Stack Developer and AI/ML Engineer with a focus on high-performance web systems and deep learning." />
   <link rel="preconnect" href="https://fonts.googleapis.com">

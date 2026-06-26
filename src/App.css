@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
 
 :root {
+  color-scheme: light;
   --bg-paper: #F9F9F7;
   --fg-ink: #111111;
   --muted-grey: #E5E5E0;
@@ -194,4 +195,85 @@ body {
 }
 .btn {
   border-radius: 0px !important;
+}
+
+/* ==========================================================================
+   Dark Theme (Newsprint Dark Mode)
+   ========================================================================== */
+
+/* Dark Theme Variable Overrides */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-paper: #121210; /* Rich warm dark charcoal paper */
+  --fg-ink: #F5F5F3;   /* High-contrast warm cream ink */
+  --muted-grey: #262624; /* Dark warm border color */
+  --accent-red: #FF3B30; /* Bright vibrant editorial red for dark mode */
+}
+
+/* Invert dot grid background svg color in dark mode */
+[data-theme="dark"] .newsprint-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23F5F5F3' fill-opacity='0.03' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+/* Invert newsprint line grid texture color in dark mode */
+[data-theme="dark"] .newsprint-texture::before {
+  background-image:
+    linear-gradient(0deg, transparent 98%, rgba(245,245,243,0.012) 100%),
+    linear-gradient(90deg, transparent 98%, rgba(245,245,243,0.012) 100%);
+}
+
+/* Dynamically map all dark borders to ink color in both modes */
+.border-dark, 
+.border-bottom.border-dark,
+.border-top.border-dark,
+.border-left.border-dark,
+.border-right.border-dark,
+.border-md-right,
+.border-dark-right {
+  border-color: var(--fg-ink) !important;
+}
+
+/* Dynamically invert Bootstrap bg utilities to support dark mode */
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-light {
+  background-color: var(--bg-paper) !important;
+  color: var(--fg-ink) !important;
+}
+
+/* Invert button outlines in dark mode */
+[data-theme="dark"] .btn-outline-dark {
+  color: var(--fg-ink) !important;
+  border-color: var(--fg-ink) !important;
+}
+[data-theme="dark"] .btn-outline-dark:hover {
+  background-color: var(--fg-ink) !important;
+  color: var(--bg-paper) !important;
+}
+
+/* Invert secondary text color (text-muted / text-muted-600) for legibility in dark mode */
+[data-theme="dark"] .text-muted,
+[data-theme="dark"] .text-muted-600 {
+  color: #B2B2B0 !important;
+}
+
+/* Invert Bootstrap text-dark in dark mode */
+[data-theme="dark"] .text-dark {
+  color: var(--fg-ink) !important;
+}
+
+/* Invert custom marquee ticker bg and text colors */
+[data-theme="dark"] .ticker-wrap.bg-dark {
+  background-color: var(--muted-grey) !important;
+  border-color: var(--fg-ink) !important;
+}
+[data-theme="dark"] .ticker-wrap.bg-dark .newsprint-marquee-content {
+  color: var(--fg-ink) !important;
+}
+
+/* Custom shadow inversion for dark mode */
+[data-theme="dark"] .hard-shadow-hover:hover {
+  box-shadow: 4px 4px 0px 0px var(--fg-ink) !important;
+}
+[data-theme="dark"] .hard-shadow-red-hover:hover {
+  box-shadow: 4px 4px 0px 0px var(--accent-red) !important;
 }

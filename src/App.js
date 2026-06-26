@@ -10,6 +10,7 @@ import CustomCursor from './Components/CustomCursor/CustomCursor';
 import Experience from './Components/Experience/Experience';
 import Contact from './Components/Contact/Contact';
 import Creations from './Components/Creations/Creations';
+import ThemeToggle from './Components/ThemeToggle/ThemeToggle';
 
 function App() {
 
@@ -57,6 +58,7 @@ function App() {
         <Experience Width={screenWidth} sectionRef={experienceRef} />
         <Contact Width={screenWidth} sectionRef={contactRef} />
       </div>
+      <ThemeToggle />
     </>
   );
 }
